@@ -9,12 +9,38 @@ import SwiftUI
 
 @main
 struct CoreDataCustomMigrationApp: App {
-    let persistenceController = PersistenceController.shared
-
+    
+    @Environment(\.scenePhase) private var scenePhase
+    let persistenceController = PersistenceController()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            AppTabView()
+                .environment(\.managedObjectContext, persistenceController.viewContext)
+        }
+        .onChange(of: scenePhase, initial: false) { o, newScenePhase in
+            switch newScenePhase {
+            case .background:
+                try? persistenceController.save()
+                print("App is in background")
+            default: break
+            }
+        }
+    }
+}
+
+struct AppTabView: View {
+
+    var body: some View {
+        TabView {
+            StudentsScreen()
+                .tabItem {
+                    Label(AppLocalization.students, systemImage: "person")
+                }
+            CoursesScreen()
+                .tabItem {
+                    Label(AppLocalization.courses, systemImage: "figure")
+                }
         }
     }
 }

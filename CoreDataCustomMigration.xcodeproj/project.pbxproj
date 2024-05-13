@@ -8,14 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		AC17DB842BEEA9D5008FED3F /* CoreDataCustomMigrationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17DB832BEEA9D5008FED3F /* CoreDataCustomMigrationApp.swift */; };
-		AC17DB862BEEA9D5008FED3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17DB852BEEA9D5008FED3F /* ContentView.swift */; };
 		AC17DB882BEEA9D6008FED3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC17DB872BEEA9D6008FED3F /* Assets.xcassets */; };
 		AC17DB8B2BEEA9D6008FED3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC17DB8A2BEEA9D6008FED3F /* Preview Assets.xcassets */; };
 		AC17DB8D2BEEA9D6008FED3F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17DB8C2BEEA9D6008FED3F /* Persistence.swift */; };
-		AC17DB902BEEA9D6008FED3F /* CoreDataCustomMigration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC17DB8E2BEEA9D6008FED3F /* CoreDataCustomMigration.xcdatamodeld */; };
 		AC17DB9A2BEEA9D6008FED3F /* CoreDataCustomMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17DB992BEEA9D6008FED3F /* CoreDataCustomMigrationTests.swift */; };
 		AC17DBA42BEEA9D6008FED3F /* CoreDataCustomMigrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17DBA32BEEA9D6008FED3F /* CoreDataCustomMigrationUITests.swift */; };
 		AC17DBA62BEEA9D6008FED3F /* CoreDataCustomMigrationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17DBA52BEEA9D6008FED3F /* CoreDataCustomMigrationUITestsLaunchTests.swift */; };
+		AC8BE07E2C10B55900D9EF5F /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE07D2C10B55900D9EF5F /* ViewModifiers.swift */; };
+		AC8BE0812C10B56D00D9EF5F /* CoursesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE07F2C10B56D00D9EF5F /* CoursesScreen.swift */; };
+		AC8BE0822C10B56D00D9EF5F /* StudentsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE0802C10B56D00D9EF5F /* StudentsScreen.swift */; };
+		AC8BE0852C10B58A00D9EF5F /* AppLocalization.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AC8BE0832C10B58A00D9EF5F /* AppLocalization.xcstrings */; };
+		AC8BE0862C10B58A00D9EF5F /* AppLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE0842C10B58A00D9EF5F /* AppLocalization.swift */; };
+		AC8BE0892C10B69B00D9EF5F /* CoreDataCustomMigration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE0872C10B69B00D9EF5F /* CoreDataCustomMigration.xcdatamodeld */; };
+		AC8BE08B2C10B7EC00D9EF5F /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE08A2C10B7EC00D9EF5F /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,16 +43,21 @@
 /* Begin PBXFileReference section */
 		AC17DB802BEEA9D5008FED3F /* CoreDataCustomMigration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataCustomMigration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC17DB832BEEA9D5008FED3F /* CoreDataCustomMigrationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCustomMigrationApp.swift; sourceTree = "<group>"; };
-		AC17DB852BEEA9D5008FED3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC17DB872BEEA9D6008FED3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC17DB8A2BEEA9D6008FED3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC17DB8C2BEEA9D6008FED3F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		AC17DB8F2BEEA9D6008FED3F /* CoreDataCustomMigration.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataCustomMigration.xcdatamodel; sourceTree = "<group>"; };
 		AC17DB952BEEA9D6008FED3F /* CoreDataCustomMigrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataCustomMigrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC17DB992BEEA9D6008FED3F /* CoreDataCustomMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCustomMigrationTests.swift; sourceTree = "<group>"; };
 		AC17DB9F2BEEA9D6008FED3F /* CoreDataCustomMigrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataCustomMigrationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC17DBA32BEEA9D6008FED3F /* CoreDataCustomMigrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCustomMigrationUITests.swift; sourceTree = "<group>"; };
 		AC17DBA52BEEA9D6008FED3F /* CoreDataCustomMigrationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCustomMigrationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC8BE07D2C10B55900D9EF5F /* ViewModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		AC8BE07F2C10B56D00D9EF5F /* CoursesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesScreen.swift; sourceTree = "<group>"; };
+		AC8BE0802C10B56D00D9EF5F /* StudentsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsScreen.swift; sourceTree = "<group>"; };
+		AC8BE0832C10B58A00D9EF5F /* AppLocalization.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = AppLocalization.xcstrings; sourceTree = "<group>"; };
+		AC8BE0842C10B58A00D9EF5F /* AppLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLocalization.swift; sourceTree = "<group>"; };
+		AC8BE0882C10B69B00D9EF5F /* CoreDataCustomMigrationV1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataCustomMigrationV1.xcdatamodel; sourceTree = "<group>"; };
+		AC8BE08A2C10B7EC00D9EF5F /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +108,14 @@
 		AC17DB822BEEA9D5008FED3F /* CoreDataCustomMigration */ = {
 			isa = PBXGroup;
 			children = (
+				AC8BE0842C10B58A00D9EF5F /* AppLocalization.swift */,
+				AC8BE0832C10B58A00D9EF5F /* AppLocalization.xcstrings */,
+				AC8BE07B2C10B53600D9EF5F /* Views */,
+				AC8BE07A2C10B52200D9EF5F /* DB */,
 				AC17DB832BEEA9D5008FED3F /* CoreDataCustomMigrationApp.swift */,
-				AC17DB852BEEA9D5008FED3F /* ContentView.swift */,
 				AC17DB872BEEA9D6008FED3F /* Assets.xcassets */,
-				AC17DB8C2BEEA9D6008FED3F /* Persistence.swift */,
-				AC17DB8E2BEEA9D6008FED3F /* CoreDataCustomMigration.xcdatamodeld */,
 				AC17DB892BEEA9D6008FED3F /* Preview Content */,
+				AC8BE0872C10B69B00D9EF5F /* CoreDataCustomMigration.xcdatamodeld */,
 			);
 			path = CoreDataCustomMigration;
 			sourceTree = "<group>";
@@ -131,6 +143,33 @@
 				AC17DBA52BEEA9D6008FED3F /* CoreDataCustomMigrationUITestsLaunchTests.swift */,
 			);
 			path = CoreDataCustomMigrationUITests;
+			sourceTree = "<group>";
+		};
+		AC8BE07A2C10B52200D9EF5F /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				AC17DB8C2BEEA9D6008FED3F /* Persistence.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		AC8BE07B2C10B53600D9EF5F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC8BE07F2C10B56D00D9EF5F /* CoursesScreen.swift */,
+				AC8BE0802C10B56D00D9EF5F /* StudentsScreen.swift */,
+				AC8BE07C2C10B53D00D9EF5F /* Common */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AC8BE07C2C10B53D00D9EF5F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AC8BE07D2C10B55900D9EF5F /* ViewModifiers.swift */,
+				AC8BE08A2C10B7EC00D9EF5F /* InputView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC17DB8B2BEEA9D6008FED3F /* Preview Assets.xcassets in Resources */,
+				AC8BE0852C10B58A00D9EF5F /* AppLocalization.xcstrings in Resources */,
 				AC17DB882BEEA9D6008FED3F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,9 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC17DB902BEEA9D6008FED3F /* CoreDataCustomMigration.xcdatamodeld in Sources */,
+				AC8BE0812C10B56D00D9EF5F /* CoursesScreen.swift in Sources */,
+				AC8BE07E2C10B55900D9EF5F /* ViewModifiers.swift in Sources */,
+				AC8BE0862C10B58A00D9EF5F /* AppLocalization.swift in Sources */,
+				AC8BE0822C10B56D00D9EF5F /* StudentsScreen.swift in Sources */,
+				AC8BE08B2C10B7EC00D9EF5F /* InputView.swift in Sources */,
 				AC17DB8D2BEEA9D6008FED3F /* Persistence.swift in Sources */,
-				AC17DB862BEEA9D5008FED3F /* ContentView.swift in Sources */,
+				AC8BE0892C10B69B00D9EF5F /* CoreDataCustomMigration.xcdatamodeld in Sources */,
 				AC17DB842BEEA9D5008FED3F /* CoreDataCustomMigrationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,13 +642,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AC17DB8E2BEEA9D6008FED3F /* CoreDataCustomMigration.xcdatamodeld */ = {
+		AC8BE0872C10B69B00D9EF5F /* CoreDataCustomMigration.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AC17DB8F2BEEA9D6008FED3F /* CoreDataCustomMigration.xcdatamodel */,
+				AC8BE0882C10B69B00D9EF5F /* CoreDataCustomMigrationV1.xcdatamodel */,
 			);
-			currentVersion = AC17DB8F2BEEA9D6008FED3F /* CoreDataCustomMigration.xcdatamodel */;
-			path = CoreDataCustomMigration.xcdatamodeld;
+			currentVersion = AC8BE0882C10B69B00D9EF5F /* CoreDataCustomMigrationV1.xcdatamodel */;
+			name = CoreDataCustomMigration.xcdatamodeld;
+			path = DB/CoreDataCustomMigration.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -8,33 +8,27 @@
 import CoreData
 
 struct PersistenceController {
-    static let shared = PersistenceController()
 
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
-        do {
-            try viewContext.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-        return result
-    }()
+    private let container: NSPersistentContainer
 
-    let container: NSPersistentContainer
-
-    init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "CoreDataCustomMigration")
-        if inMemory {
-            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+    var viewContext: NSManagedObjectContext
+    
+    private let dbName = "CoreDataCustomMigration"
+    
+    init() {
+        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last else {
+            fatalError("Error Documents Directory")
         }
+        
+        let dataStoreURL = documentsDirectory.appendingPathComponent("\(dbName).sqlite")
+        container = NSPersistentContainer(name: dbName)
+        container.persistentStoreDescriptions.first!.url = dataStoreURL
+        
+        if let description = container.persistentStoreDescriptions.first {
+            description.shouldInferMappingModelAutomatically = false
+            description.shouldMigrateStoreAutomatically = true
+        }
+
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -51,6 +45,16 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+        
         container.viewContext.automaticallyMergesChangesFromParent = true
+        viewContext = container.viewContext
+    }
+    
+    func save() throws {
+        try viewContext.performAndWait {
+            if viewContext.hasChanges {
+                try viewContext.save()
+            }
+        }
     }
 }
