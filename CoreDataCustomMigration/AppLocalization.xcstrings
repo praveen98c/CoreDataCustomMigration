@@ -1,6 +1,17 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "addEnrollment" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add New Enrollment"
+          }
+        }
+      }
+    },
     "courses" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -19,6 +30,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Details"
+          }
+        }
+      }
+    },
+    "enrollments" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enrollments"
           }
         }
       }
@@ -63,6 +85,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enter your email"
+          }
+        }
+      }
+    },
+    "enterEnrollmentDate" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter your enrollment date"
+          }
+        }
+      }
+    },
+    "enterGrade" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter your grade"
           }
         }
       }

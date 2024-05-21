@@ -52,7 +52,7 @@ struct CourseAddScreen: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            InputView(label: AppLocalization.enterCourseName, value: $name)
+            TextInputView(label: AppLocalization.enterCourseName, value: $name)
             Button(course == nil ? AppLocalization.submit : AppLocalization.update) {
                 updateCourse()
                 self.presentationMode.wrappedValue.dismiss()

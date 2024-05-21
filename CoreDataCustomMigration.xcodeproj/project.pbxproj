@@ -20,7 +20,11 @@
 		AC8BE0852C10B58A00D9EF5F /* AppLocalization.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AC8BE0832C10B58A00D9EF5F /* AppLocalization.xcstrings */; };
 		AC8BE0862C10B58A00D9EF5F /* AppLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE0842C10B58A00D9EF5F /* AppLocalization.swift */; };
 		AC8BE0892C10B69B00D9EF5F /* CoreDataCustomMigration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE0872C10B69B00D9EF5F /* CoreDataCustomMigration.xcdatamodeld */; };
-		AC8BE08B2C10B7EC00D9EF5F /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE08A2C10B7EC00D9EF5F /* InputView.swift */; };
+		AC8BE08B2C10B7EC00D9EF5F /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE08A2C10B7EC00D9EF5F /* TextInputView.swift */; };
+		AC8BE08E2C10C65D00D9EF5F /* EnrollmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE08D2C10C65D00D9EF5F /* EnrollmentScreen.swift */; };
+		AC8BE0912C10C67700D9EF5F /* StudentToStudentPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE0902C10C67700D9EF5F /* StudentToStudentPolicy.swift */; };
+		AC8BE0962C10F21E00D9EF5F /* DateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE0952C10F21E00D9EF5F /* DateInputView.swift */; };
+        ACC7BC4B2C162B2500DE364C /* MappingModel-V1-V2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = ACC7BC4A2C162B2500DE364C /* MappingModel-V1-V2.xcmappingmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +61,12 @@
 		AC8BE0832C10B58A00D9EF5F /* AppLocalization.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = AppLocalization.xcstrings; sourceTree = "<group>"; };
 		AC8BE0842C10B58A00D9EF5F /* AppLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLocalization.swift; sourceTree = "<group>"; };
 		AC8BE0882C10B69B00D9EF5F /* CoreDataCustomMigrationV1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataCustomMigrationV1.xcdatamodel; sourceTree = "<group>"; };
-		AC8BE08A2C10B7EC00D9EF5F /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		AC8BE08A2C10B7EC00D9EF5F /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
+		AC8BE08D2C10C65D00D9EF5F /* EnrollmentScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollmentScreen.swift; sourceTree = "<group>"; };
+		AC8BE0902C10C67700D9EF5F /* StudentToStudentPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentToStudentPolicy.swift; sourceTree = "<group>"; };
+		AC8BE0922C10C68400D9EF5F /* CoreDataCustomMigrationV2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataCustomMigrationV2.xcdatamodel; sourceTree = "<group>"; };
+		AC8BE0952C10F21E00D9EF5F /* DateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInputView.swift; sourceTree = "<group>"; };
+        ACC7BC4A2C162B2500DE364C /* MappingModel-V1-V2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "MappingModel-V1-V2.xcmappingmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +157,7 @@
 		AC8BE07A2C10B52200D9EF5F /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				AC8BE08F2C10C67700D9EF5F /* MigrationPolicies */,
 				AC17DB8C2BEEA9D6008FED3F /* Persistence.swift */,
 			);
 			path = DB;
@@ -156,6 +166,7 @@
 		AC8BE07B2C10B53600D9EF5F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC8BE08D2C10C65D00D9EF5F /* EnrollmentScreen.swift */,
 				AC8BE07F2C10B56D00D9EF5F /* CoursesScreen.swift */,
 				AC8BE0802C10B56D00D9EF5F /* StudentsScreen.swift */,
 				AC8BE07C2C10B53D00D9EF5F /* Common */,
@@ -167,9 +178,19 @@
 			isa = PBXGroup;
 			children = (
 				AC8BE07D2C10B55900D9EF5F /* ViewModifiers.swift */,
-				AC8BE08A2C10B7EC00D9EF5F /* InputView.swift */,
+				AC8BE08A2C10B7EC00D9EF5F /* TextInputView.swift */,
+				AC8BE0952C10F21E00D9EF5F /* DateInputView.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		AC8BE08F2C10C67700D9EF5F /* MigrationPolicies */ = {
+			isa = PBXGroup;
+			children = (
+				AC8BE0902C10C67700D9EF5F /* StudentToStudentPolicy.swift */,
+				ACC7BC4A2C162B2500DE364C /* MappingModel-V1-V2.xcmappingmodel */,
+			);
+			path = MigrationPolicies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +328,12 @@
 				AC8BE07E2C10B55900D9EF5F /* ViewModifiers.swift in Sources */,
 				AC8BE0862C10B58A00D9EF5F /* AppLocalization.swift in Sources */,
 				AC8BE0822C10B56D00D9EF5F /* StudentsScreen.swift in Sources */,
-				AC8BE08B2C10B7EC00D9EF5F /* InputView.swift in Sources */,
+				AC8BE0912C10C67700D9EF5F /* StudentToStudentPolicy.swift in Sources */,
+				ACC7BC4B2C162B2500DE364C /* MappingModel-V1-V2.xcmappingmodel in Sources */,
+				AC8BE08B2C10B7EC00D9EF5F /* TextInputView.swift in Sources */,
 				AC17DB8D2BEEA9D6008FED3F /* Persistence.swift in Sources */,
+				AC8BE08E2C10C65D00D9EF5F /* EnrollmentScreen.swift in Sources */,
+				AC8BE0962C10F21E00D9EF5F /* DateInputView.swift in Sources */,
 				AC8BE0892C10B69B00D9EF5F /* CoreDataCustomMigration.xcdatamodeld in Sources */,
 				AC17DB842BEEA9D5008FED3F /* CoreDataCustomMigrationApp.swift in Sources */,
 			);
@@ -645,9 +670,10 @@
 		AC8BE0872C10B69B00D9EF5F /* CoreDataCustomMigration.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				AC8BE0922C10C68400D9EF5F /* CoreDataCustomMigrationV2.xcdatamodel */,
 				AC8BE0882C10B69B00D9EF5F /* CoreDataCustomMigrationV1.xcdatamodel */,
 			);
-			currentVersion = AC8BE0882C10B69B00D9EF5F /* CoreDataCustomMigrationV1.xcdatamodel */;
+			currentVersion = AC8BE0922C10C68400D9EF5F /* CoreDataCustomMigrationV2.xcdatamodel */;
 			name = CoreDataCustomMigration.xcdatamodeld;
 			path = DB/CoreDataCustomMigration.xcdatamodeld;
 			sourceTree = "<group>";

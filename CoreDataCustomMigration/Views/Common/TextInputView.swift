@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct InputView: View {
+struct TextInputView: View {
     
     var label: String
     var keyboardType: UIKeyboardType
@@ -21,10 +21,12 @@ struct InputView: View {
     }
     
     var body: some View {
-        Text(label)
-            .nameStyle()
-        TextField(label, text: $value)
-            .inputStyle()
-            .keyboardType(keyboardType)
+        VStack(alignment: .leading) {
+            Text(label)
+                .nameStyle()
+            TextField(label, text: $value)
+                .inputStyle()
+                .keyboardType(keyboardType)
+        }
     }
 }

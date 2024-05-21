@@ -59,7 +59,19 @@ class AppLocalization {
         String(localized: "enterCourseName", table: AppLocalization.tableName)
     }
     
-    static var selectCourses: String {
-        String(localized: "selectCourse", table: AppLocalization.tableName)
+    static var enrollments: String {
+        String(localized: "enrollments", table: AppLocalization.tableName)
+    }
+    
+    static var addEnrollment: String {
+        String(localized: "addEnrollment", table: AppLocalization.tableName)
+    }
+    
+    static var enterGrade: String {
+        String(localized: "enterGrade", table: AppLocalization.tableName)
+    }
+    
+    static var enterEnrollmentDate: String {
+        String(localized: "enterEnrollmentDate", table: AppLocalization.tableName)
     }
 }
