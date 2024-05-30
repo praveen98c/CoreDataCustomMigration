@@ -74,4 +74,8 @@ class AppLocalization {
     static var enterEnrollmentDate: String {
         String(localized: "enterEnrollmentDate", table: AppLocalization.tableName)
     }
+    
+    static var enterDescription: String {
+        String(localized: "enterDescription", table: AppLocalization.tableName)
+    }
 }

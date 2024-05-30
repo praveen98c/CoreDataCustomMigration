@@ -16,6 +16,7 @@ struct EnrollmentEditScreen: View {
     
     @State private var grade = "0"
     @State private var enrollmentDate = Date()
+    @State private var description = ""
     @State var selectedCourse: Course?
     
     var onDismiss: (Enrollment) -> Void
@@ -34,6 +35,7 @@ struct EnrollmentEditScreen: View {
             List {
                 Section(header: Text(AppLocalization.details)) {
                     TextInputView(label: AppLocalization.enterGrade, keyboardType: .numberPad, value: $grade)
+                    TextInputView(label: AppLocalization.enterDescription, keyboardType: .numberPad, value: $description)
                     DateInputView(label: AppLocalization.enterEnrollmentDate, value: $enrollmentDate)
                 }
                 
@@ -82,6 +84,7 @@ extension EnrollmentEditScreen {
         enrollment.course = selectedCourse
         enrollment.grade = Float(grade) ?? 0
         enrollment.date = enrollmentDate
+        enrollment.desc = description
         return enrollment
     }
 }
