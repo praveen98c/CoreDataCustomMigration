@@ -26,7 +26,15 @@ struct PersistenceController {
         
         if let description = container.persistentStoreDescriptions.first {
             description.shouldInferMappingModelAutomatically = false
-            description.shouldMigrateStoreAutomatically = true
+            description.shouldMigrateStoreAutomatically = false
+        }
+        
+        do {
+            try PersistenceMigrator(documentsDirectory: documentsDirectory, dbName: dbName).migrateIteratively(dataStoreURL: dataStoreURL)
+        } catch {
+            if error is DatabaseError {
+                fatalError("DB Migration Failed \(error)")
+            }
         }
 
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in

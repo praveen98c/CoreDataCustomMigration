@@ -26,6 +26,7 @@
 		AC8BE0962C10F21E00D9EF5F /* DateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE0952C10F21E00D9EF5F /* DateInputView.swift */; };
 		ACC7BC4D2C162F2600DE364C /* MappingModel-V2-V3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = ACC7BC4C2C162F2600DE364C /* MappingModel-V2-V3.xcmappingmodel */; };
 		ACC7BC502C16725800DE364C /* MappingModel-V1-V2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = ACC7BC482C16256500DE364C /* MappingModel-V1-V2.xcmappingmodel */; };
+		AC8BE09E2C11043F00D9EF5F /* PersistenceMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BE09D2C11043F00D9EF5F /* PersistenceMigrator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		AC8BE09A2C10FFA000D9EF5F /* CoreDataCustomMigrationV3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataCustomMigrationV3.xcdatamodel; sourceTree = "<group>"; };
 		ACC7BC482C16256500DE364C /* MappingModel-V1-V2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "MappingModel-V1-V2.xcmappingmodel"; sourceTree = "<group>"; };
 		ACC7BC4C2C162F2600DE364C /* MappingModel-V2-V3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "MappingModel-V2-V3.xcmappingmodel"; sourceTree = "<group>"; };
+		AC8BE09D2C11043F00D9EF5F /* PersistenceMigrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceMigrator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		AC8BE07A2C10B52200D9EF5F /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				AC8BE09D2C11043F00D9EF5F /* PersistenceMigrator.swift */,
 				AC8BE08F2C10C67700D9EF5F /* MigrationPolicies */,
 				AC17DB8C2BEEA9D6008FED3F /* Persistence.swift */,
 			);
@@ -340,6 +343,7 @@
 				AC8BE0962C10F21E00D9EF5F /* DateInputView.swift in Sources */,
 				AC8BE0892C10B69B00D9EF5F /* CoreDataCustomMigration.xcdatamodeld in Sources */,
 				ACC7BC4D2C162F2600DE364C /* MappingModel-V2-V3.xcmappingmodel in Sources */,
+				AC8BE09E2C11043F00D9EF5F /* PersistenceMigrator.swift in Sources */,
 				AC17DB842BEEA9D5008FED3F /* CoreDataCustomMigrationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
